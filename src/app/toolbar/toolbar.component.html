@@ -4,7 +4,9 @@
     </button>
     <span>My App</span>
     <span class="example-spacer"></span>
+    <mat-icon (click)="mealS.searchEmitter.emit(this.searchText)">search</mat-icon>
     <input class="search" matInput placeholder="SEARCH" [(ngModel)]="searchText">
+
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
     </button>

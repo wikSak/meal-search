@@ -15,7 +15,7 @@ export class ToolbarComponent implements OnInit {
   }
   @HostListener('window:keydown', ['$event']) spaceEvent(event: any) {
     if(event.key === 'Enter'){
-      this.mealS.searchEmitter.emit(this.searchText)
+      this.mealS.searchEmitter.emit(this.searchText);
     }
   }
 

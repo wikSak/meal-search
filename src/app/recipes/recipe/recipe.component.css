@@ -1,12 +1,11 @@
 .wrapper {
     border-radius: 10%;
     border: 1px solid #999;
-    width: 25vw;
-    min-width: 100px;
+    width: 20vw;
+    min-width: 200px;
     height: 30vh;
-    margin-bottom: 3vh;
-    margin-left: 3vh;
     overflow: hidden;
+    position: relative;
 }
 
 .photo-wrapper {
@@ -26,4 +25,11 @@
     align-items: center;
     justify-content: center;
     color: #999;
+}
+
+.icon {
+    position: absolute;
+    top: 66%;
+    right: 10px;
+    color: #fff;
 }

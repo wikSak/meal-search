@@ -1,4 +1,36 @@
 <div class="wrapper">
+
+    <div class="attributes">
+        <div class="attributes-wrapper">
+            <div class="categories">
+                <h2 class="headline">Category</h2>
+                <div class="categories-wrapper">
+                    <div *ngFor="let category of categories" class="category">
+                        <mat-icon class="icon" (click)="removeCategory(category)">close</mat-icon>
+                        <div class="category-name">{{category}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="categories">
+                <h2 class="headline">Area</h2>
+                <div class="categories-wrapper">
+                    <div *ngFor="let area of areas" class="category">
+                        <mat-icon class="icon" (click)="removeArea(area)">close</mat-icon>
+                        <div class="category-name">{{area}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="categories">
+                <h2 class="headline">Tags</h2>
+                <div class="categories-wrapper">
+                    <div *ngFor="let tag of tags" class="category">
+                        <mat-icon class="icon" (click)="removeTag(tag)">close</mat-icon>
+                        <div class="category-name">{{tag}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="recipes-wrapper">
         <app-recipe *ngFor="let recipe of meals" [name]="recipe.strMeal" [photo]="recipe.strMealThumb"></app-recipe>
     </div>

@@ -1,4 +1,5 @@
 <div class="wrapper">
     <div class="photo-wrapper" [ngStyle]="{'background-image': 'url('+photo+')'}"></div>
+    <mat-icon class="icon" (click)="addToFavorites()">favorite_border</mat-icon>
     <div class="title">{{name}}</div>
 </div>
