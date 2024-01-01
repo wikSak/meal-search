@@ -15,7 +15,6 @@ import { RecipeComponent } from './recipes/recipe/recipe.component';
 import { FormsModule } from '@angular/forms';
 import { FavouritesComponent } from './toolbar/favourites/favourites.component';
 import { ActiveRecipeComponent } from './recipes/active-recipe/active-recipe.component';
-import { YouTubePlayerModule } from '@angular/youtube-player';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +34,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     MatIconModule,
     MatInputModule,
     HttpClientModule,
-    FormsModule,
-    YouTubePlayerModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
