@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Output, EventEmitter } from '@angular/core';
+import { Meal } from './meal';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MealService {
+  favourites:Meal[] =[];
   @Output() searchEmitter = new EventEmitter;
   constructor(private http: HttpClient) { }
 

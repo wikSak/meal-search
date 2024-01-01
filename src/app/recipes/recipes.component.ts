@@ -11,10 +11,11 @@ import { Subscription } from 'rxjs';
 })
 export class RecipesComponent implements OnInit {
   meals!:Meal[];
-
+  activeRecipe!:Meal;
   categories = [''];
   areas = [''];
   tags =[''];
+  hideRecipe = true;
 
   searchSub: Subscription;
   constructor(public mealS: MealService) {
@@ -104,9 +105,19 @@ export class RecipesComponent implements OnInit {
       if(this.categories.includes(meal.strCategory) && this.areas.includes(meal.strArea) ) {
        this.meals.push(meal)
       }
-    
-      // this.checkTags(meal);
+
      });
-     console.log(this.meals)
+ 
+  }
+
+  showInstruction(recipe: Meal){
+
+    if(this.activeRecipe === recipe) {
+     
+      this.hideRecipe = !this.hideRecipe;
+    } else {
+      this.hideRecipe = false;
+    }
+    this.activeRecipe = recipe;
   }
 }

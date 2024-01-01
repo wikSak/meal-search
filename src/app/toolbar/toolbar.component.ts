@@ -7,7 +7,7 @@ import { MealService } from '../meal.service';
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit {
-
+  isFavourite = false;
   searchText = '';
   constructor(public mealS: MealService) { }
 
@@ -17,6 +17,10 @@ export class ToolbarComponent implements OnInit {
     if(event.key === 'Enter'){
       this.mealS.searchEmitter.emit(this.searchText);
     }
+  }
+
+  toggleFavourites() {
+    this.isFavourite = !this.isFavourite;
   }
 
 }

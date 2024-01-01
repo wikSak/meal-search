@@ -1,0 +1,11 @@
+.wrapper {
+    left: 0;
+    position: absolute;
+    width: 70vw;
+    height: 30vh;
+    border: 1px solid #999;
+    border-radius: 10px;
+    background: #fff;
+    z-index: 9;
+    margin-top: 20px;
+}

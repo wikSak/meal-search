@@ -84,3 +84,7 @@
     font-weight: normal;
     font-size: 20px;
 }
+
+.inactive {
+    opacity: .5;
+}

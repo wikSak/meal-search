@@ -6,8 +6,9 @@
     <span class="example-spacer"></span>
     <mat-icon (click)="mealS.searchEmitter.emit(this.searchText)">search</mat-icon>
     <input class="search" matInput placeholder="SEARCH" [(ngModel)]="searchText">
-
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
+    <app-favourites *ngIf="isFavourite"></app-favourites>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="toggleFavourites()">
+      <mat-icon [ngClass]="{'active': isFavourite}">favorite</mat-icon>
     </button>
   </mat-toolbar>
+ 

@@ -1,0 +1,9 @@
+<div class="wrapper">
+
+    <div class="list-wrapper">
+        <div *ngFor="let meal of mealS.favourites" class="meal">
+            <div class="photo" [ngStyle]="{'background-image': 'url('+meal.strMealThumb+')'}"></div>
+            <div class="name">{{meal.strMeal}}</div>
+        </div>
+    </div>
+</div>

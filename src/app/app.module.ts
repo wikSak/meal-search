@@ -13,12 +13,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeComponent } from './recipes/recipe/recipe.component';
 import { FormsModule } from '@angular/forms';
+import { FavouritesComponent } from './toolbar/favourites/favourites.component';
+import { ActiveRecipeComponent } from './recipes/active-recipe/active-recipe.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     RecipesComponent,
     RecipeComponent,
+    FavouritesComponent,
+    ActiveRecipeComponent,
  
   ],
   imports: [
@@ -30,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatInputModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
