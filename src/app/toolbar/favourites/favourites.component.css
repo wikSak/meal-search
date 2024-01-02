@@ -1,14 +1,15 @@
 .wrapper {
     width: 30vw;
     min-width: 300px;
-    height: 400px;
+    min-height: 82px;
+    max-height: 400px;
     background: #fff;
-    border: 1px solid #999;
+    border: 1px solid #1B2727;
     border-radius: 10px;
     position: absolute;
     top: 10px;
     right: 16px;
-    overflow-y: scroll;
+
 }
 .list-wrapper {
     align-items: center;
@@ -16,8 +17,9 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    margin-top: 20px;
-
+    margin-top: 40px;
+    overflow-y: scroll;
+    max-height: 360px;
 }
 .meal {
     display: flex;
@@ -25,19 +27,45 @@
     justify-content: flex-start;
     width: 76%;
     height: 45px;
+    min-height: 45px;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .photo {
     height: 100%;
-    width: 30%;
+    min-width: 30%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 5px;
 }
 .name {
     color: #999;
     padding-left: 20px;
     font-size: 16px;
+    line-height: 20px;
     font-weight: normal;
+    white-space: pre-wrap;
 }  
+
+.add-fav{
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 4px;
+    width: 100%;
+}
+
+.icon   {
+    color: #999;
+    font-size: 20px;
+    position: absolute;
+    right: -20px;
+}

@@ -12,20 +12,28 @@ export class RecipeComponent implements OnInit {
   @Input() photo = '';
   @Input() isActive = false;
   @Output() instructionEmitter = new EventEmitter;
+  
 
   constructor(public mealS: MealService) { }
 
   ngOnInit(): void {
   }
   addToFavorites() {
-    if(!this.mealS.favourites.includes(this.recipe)){
+    if(!this.checkIfFavourite(this.recipe)){
       this.mealS.favourites.push(this.recipe)
     } else {
-      this.mealS.favourites = this.mealS.favourites.filter(x => x !== this.recipe)
+      this.mealS.favourites = this.mealS.favourites.filter(x => x.idMeal !== this.recipe.idMeal)
     }
+
+    localStorage.setItem('favourites',JSON.stringify(this.mealS.favourites) );
   
   }
   showInstruction() {
     this.instructionEmitter.emit();
+  }
+
+  checkIfFavourite(meal: Meal): boolean {
+    const test = this.mealS.favourites.filter(recipe => recipe.idMeal === meal.idMeal);
+    return test.length > 0;
   }
 }

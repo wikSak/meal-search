@@ -1,7 +1,7 @@
 .wrapper {
     border-radius: 10%;
-    border: 1px solid #999;
-    width: 20vw;
+    border: 1px solid #1B2727;
+    width: 21vw;
     min-width: 200px;
     height: 30vh;
     overflow: hidden;
@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: center;
     color: #999;
+    /* color: #1B2727; */
 }
 
 .icon {

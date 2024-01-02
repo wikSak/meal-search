@@ -15,6 +15,8 @@ export class AppComponent implements OnInit{
   }
 
     ngOnInit(): void {
- 
+      let fav = window.localStorage.getItem("favourites");
+      
+      this.mealS.favourites = JSON.parse(fav!);
     }
 }

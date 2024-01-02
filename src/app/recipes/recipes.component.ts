@@ -22,7 +22,6 @@ export class RecipesComponent implements OnInit {
     this.mealS.fetchInitialMeals().subscribe((response:any)=> {
       this.meals = response.meals;
       this.searchAttributes();
-      console.log(this.meals)
     });
 
 
@@ -77,7 +76,6 @@ export class RecipesComponent implements OnInit {
   }
   removeTag(tag:string) {
     this.tags = this.tags.filter(x => x !== tag);
-    // this.updateMeals();
     let oldArr = this.meals;
     this.meals = [];
 

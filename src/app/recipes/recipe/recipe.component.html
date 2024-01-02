@@ -1,8 +1,10 @@
 <div class="wrapper" >
     <div class="photo-wrapper" [ngStyle]="{'background-image': 'url('+photo+')'}"></div>
     <div class="button" (click)="showInstruction()"></div>
-    <mat-icon class="icon" (click)="addToFavorites()">{{this.mealS.favourites.includes(this.recipe) ? 'favorite' : 'favorite_border'}}</mat-icon>
+    <mat-icon class="icon" (click)="addToFavorites()">{{checkIfFavourite(this.recipe) ? 'favorite' : 'favorite_border'}}</mat-icon>
     <div class="title">{{recipe.strMeal}}</div>
 </div>
 <app-active-recipe *ngIf="isActive" [meal]="recipe"></app-active-recipe>
+
+<!-- this.mealS.favourites.includes(this.recipe) -->
 

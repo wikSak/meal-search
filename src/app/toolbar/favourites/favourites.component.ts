@@ -12,5 +12,12 @@ export class FavouritesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  removeFavourite(meal:any) {
+      this.mealS.favourites = this.mealS.favourites.filter(x => x !== meal);
+      localStorage.setItem('favourites',JSON.stringify(this.mealS.favourites) );
+      let fav = window.localStorage.getItem("favourites");
+      
+      this.mealS.favourites = JSON.parse(fav!);
 
+  }
 }

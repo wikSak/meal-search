@@ -1,2 +1,21 @@
-<video data-yt2html5="https://www.youtube.com/watch?v=ScMzIvxBSi4"></video>
+<div class="wrapper">
+    <iframe class="video"
+    [src]="videoUrl">
+    </iframe>
 
+    <div class="right-wrapper">
+        <div class="instruction-wrapper">
+            <div class="text1">Instruction</div>
+            <div class="desc">{{meal.strInstructions}}</div>
+        </div>
+        <div class="ingredients-wrapper">
+            <div class="text1">Ingredients</div>
+            <div class="ingredients">
+                <div *ngFor="let product of ingredients" class="ingredient">
+                    <div class="amount">{{product.amount}} - </div>
+                    <div class="name">{{product.name}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

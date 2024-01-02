@@ -1,9 +1,11 @@
 <div class="wrapper">
-
+    <div class="add-fav" [ngStyle]="{'top.px': mealS.favourites.length === 0 ? 23 : 6}">{{mealS.favourites.length === 0 ? 'Add recipe to favourites' : 'Favourites'}}</div>
     <div class="list-wrapper">
+       
         <div *ngFor="let meal of mealS.favourites" class="meal">
             <div class="photo" [ngStyle]="{'background-image': 'url('+meal.strMealThumb+')'}"></div>
             <div class="name">{{meal.strMeal}}</div>
+            <mat-icon class="icon" (click)="removeFavourite(meal)">close</mat-icon>
         </div>
     </div>
 </div>
