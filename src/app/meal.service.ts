@@ -8,6 +8,7 @@ import { Meal } from './meal';
 export class MealService {
   favourites:Meal[] =[];
   @Output() searchEmitter = new EventEmitter;
+  @Output() toggleAttributes = new EventEmitter;
   constructor(private http: HttpClient) { }
 
   public fetchInitialMeals() {

@@ -1,5 +1,5 @@
 <mat-toolbar id="toolbar" color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button id="menu" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="mealS.toggleAttributes.emit()">
       <mat-icon>menu</mat-icon>
     </button>
     <span>My App</span>

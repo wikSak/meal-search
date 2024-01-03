@@ -7,4 +7,18 @@
 
 #toolbar {
     background: #3C5148;
+    padding: 0 16px;
+}
+
+#menu {
+    display: none;
+}
+
+@media (max-width: 830px) {
+    #menu {
+        display: block;
+    }
+    #toolbar {
+        padding: 0;
+    }
 }

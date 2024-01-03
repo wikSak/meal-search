@@ -1,6 +1,6 @@
 <div class="wrapper">
 
-    <div class="attributes">
+    <div class="attributes" [ngClass]="{'left': showAttributes}">
         <div class="attributes-wrapper">
             <div class="categories">
                 <h2 class="headline">Category</h2>
@@ -34,5 +34,5 @@
     <div class="recipes-wrapper">
         <app-recipe *ngFor="let recipe of meals" [recipe]="recipe" [photo]="recipe.strMealThumb" [isActive]="recipe === activeRecipe && !hideRecipe" (instructionEmitter)="showInstruction(recipe)" [ngClass]="{'inactive': recipe !== activeRecipe && !hideRecipe}"></app-recipe>
     </div>
-
+   
 </div>

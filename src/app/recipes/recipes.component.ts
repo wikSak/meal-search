@@ -16,7 +16,8 @@ export class RecipesComponent implements OnInit {
   areas = [''];
   tags =[''];
   hideRecipe = true;
-
+  attributesSub:Subscription;
+  showAttributes = false;
   searchSub: Subscription;
   constructor(public mealS: MealService) {
     this.mealS.fetchInitialMeals().subscribe((response:any)=> {
@@ -25,11 +26,15 @@ export class RecipesComponent implements OnInit {
     });
 
 
+
     this.searchSub = this.mealS.searchEmitter.subscribe((text)=>{
       this.mealS.searchByName(text).subscribe((response:any) => {
         this.meals = response.meals;
         this.searchAttributes();
       });
+    })
+    this.attributesSub = this.mealS.toggleAttributes.subscribe(()=>{
+      this.toggleAttributes();
     })
    }
 
@@ -117,5 +122,9 @@ export class RecipesComponent implements OnInit {
       this.hideRecipe = false;
     }
     this.activeRecipe = recipe;
+  }
+
+  toggleAttributes() {
+    this.showAttributes = !this.showAttributes;
   }
 }

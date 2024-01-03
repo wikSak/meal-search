@@ -9,6 +9,7 @@ import { MealService } from '../meal.service';
 export class ToolbarComponent implements OnInit {
   isFavourite = false;
   searchText = '';
+  changeAttributes = new EventEmitter;
   constructor(public mealS: MealService) { }
 
   ngOnInit(): void {
